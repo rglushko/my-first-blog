@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Генерація гарантійного талону</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('{% static 'fonts/your_font.ttf' %}') format('truetype');
+        }
+        body {
+            font-family: 'CustomFont';
+            background-image: url('{% static 'images/your_background_image1.jpg' %}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        button {
+            font-family: 'CustomFont';
+        }
+    </style>
+</head>
+<body>
+    <h1>Гарантійний талон Грундфос</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="serial_number">Серійний номер:</label>
+        <input type="text" id="serial_number" name="serial_number" required>
+        <br>
+        <label for="pin">PIN:</label>
+        <input type="text" id="pin" name="pin" required>
+        <br>
+        <button type="submit">Згенерувати талон</button>
+    </form> 
+</body>
+</html>

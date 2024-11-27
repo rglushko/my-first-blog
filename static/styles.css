@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-image: url('your_background_image.jpg');
+}
+h1 {
+    color: #333;
+}
+form {
+    margin-top: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 300px;
+}
+button {
+    padding: 10px 20px;
+    background-color: #126AF3;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #5D7469;
+}
